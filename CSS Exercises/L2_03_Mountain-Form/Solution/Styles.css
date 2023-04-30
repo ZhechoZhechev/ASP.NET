@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@300&family=PT+Sans&family=PT+Serif&display=swap');
+
+body{
+    font-family: 'Lato', sans-serif;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+form{
+    display: flex;
+    padding-left: 75px;
+}
+
+section{
+    display: inline-block;
+    width: 400px;
+}
+
+body > form > section:nth-child(1) {
+    text-align: center;
+    background: linear-gradient(rgba(218, 95, 232, 0.15), rgba(187, 108, 206, 0.5)), url('./Images/peak.jpg') no-repeat;
+    background-size: cover;
+    color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+body > form > section:nth-child(1) h1{
+    padding-bottom: 450px;
+    padding-top: 40px;
+    font-size: 36px;
+    margin: 0 auto;
+}
+
+body > form > section:nth-child(2){
+    align-items: center;
+    border: 3px solid black;
+    width: 397px;
+    height: 640px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+body form section i{
+    padding-bottom: 25px;
+}
+
+body form .left p{
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+body form .right label{
+    color:rgb(218, 217, 220) ;
+}
+
+body form .right input{
+    color: rgb(118, 115, 115);
+}
+
+body form .right label, input{
+    display: block;
+    margin-bottom: 10px;
+    width: 200px;
+    font-size: 20px;
+    margin-left: 80px;
+    }
+
+body form .right input{
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+body form .right button{
+    display: inline-block;
+}
+
+body form .right p{
+    margin: 0 auto;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+body > form > section.right > label:nth-child(1){
+    padding-top: 150px;
+}
+
+body > form > section.right > button:nth-child(9){
+    margin-left: 80px;
+    background: #38082A;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+body > form > section.right > button:nth-child(11){
+    color: #38082A;
+    font-size: 15px;
+    background: transparent;
+    border: none;
+}
+
+body > form > section.right > button:nth-child(9):hover{
+    color: #38082A;
+    background: white;
+    cursor: pointer;
+}
+
+body > form > section.right > button:nth-child(11):hover{
+    color: white;
+    background: #38082A;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+body form .right input:nth-child(8){
+    margin-bottom: 30px;
+}
+
+
