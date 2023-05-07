@@ -1,0 +1,55 @@
+html{
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+div, section{
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    max-width: 65vw;
+    margin: 0 auto;
+}
+
+span{
+    border: 1px solid black;
+    display: block;
+    padding: 12px;
+}
+
+
+.container .week{
+    width: 75%;
+    flex-wrap: wrap;
+}
+
+.container .notes{
+    flex-direction: column;
+    width: 25%;
+    align-self: stretch;
+}
+
+.weekparts{
+    width: 100%;
+}
+
+.workdays{
+    width: 185px;
+    font-size: 11px;
+    padding: 20px 0;
+}
+
+.restdays{
+    width: 466px;
+    font-size: 11px;
+    padding: 20px 0;
+}
+
+.sidenotes{
+    width: 100%;
+    flex: 1 1 50%;
+    padding: 20px 0;
+}

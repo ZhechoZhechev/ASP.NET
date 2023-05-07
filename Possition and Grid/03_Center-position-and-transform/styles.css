@@ -1,0 +1,56 @@
+body {
+    background: rgb(238, 238, 238);
+}
+
+section {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 500px;
+    height: 550px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+div {
+    height: 340px;
+}
+
+body>section>div.content {
+    padding-left: 40px;
+    position: relative;
+}
+
+a {
+    background: rgb(0, 153, 0);
+    text-decoration: none;
+    color: black;
+
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 1em;
+    list-style: 1.2;
+}
+
+img {
+    position: absolute;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+p {
+    font-size: 20px;
+    width: 90%;
+}
+
+a {
+
+    color: white;
+    padding: 10px 20px;
+    position: absolute;
+    font-size: 18px;
+    bottom: 175px;
+    right: 25px;
+    border-radius: 5px;
+}
