@@ -1,0 +1,12 @@
+main{
+    width: 700px;
+    height: 500px;
+    margin: 60px;
+}
+
+.new{
+    position: relative;
+    top: -200px;
+    right: 150px;
+    /* box-shadow: 1px 1px 1px rgb(0, 0, 0, 25%); */
+}

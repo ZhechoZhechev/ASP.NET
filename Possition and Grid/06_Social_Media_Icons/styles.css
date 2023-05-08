@@ -1,0 +1,35 @@
+li{
+    display: inline-block;
+    background-color: lightgrey;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 50%;
+}
+li a{
+    color: black;
+    border-radius: 50%;
+}
+
+ul{
+    display: inline-block;
+}
+
+body > ul > li:nth-child(1) > a:hover{
+    color: blue;
+}
+
+body > ul > li:nth-child(2) > a:hover{
+    color: skyblue;
+}
+
+body > ul > li:nth-child(3) > a:hover{
+    color: red;
+}
+
+body > ul > li:nth-child(4) > a:hover{
+    color: rgb(62, 169, 211);
+}
+
+body > ul > li:nth-child(5) > a:hover{
+    color: rgb(3, 177, 245);
+}
