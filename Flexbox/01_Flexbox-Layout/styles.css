@@ -3,27 +3,28 @@ body {
     padding: 5rem;
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 header,
 main,
 aside,
 footer {
-    padding: 3rem;
+    padding: 2rem;
     background-color: #FFF;
     border-radius: 0.4rem;
     color: #000;
+
 }
 
 header,
 footer {
     flex-basis: 100%;
-    margin: 40px 0;
 }
 
 main {
     flex: 8 1 40rem;
-    margin-right: 40px;
+    /* margin-right: 40px; */
 }
 
 aside {

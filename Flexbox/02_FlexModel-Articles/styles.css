@@ -3,6 +3,11 @@ html {
     line-height: 1.5;
   }
   
+  body{
+    display: flex;
+    justify-content: center;
+  }
+
   h2 {
     font-family: Georgia, serif;
     line-height: 1.2;
@@ -10,11 +15,10 @@ html {
   
   section {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     max-width: 70vw;
-    margin: auto;
   }
-  
-  article {
-    margin: 0 1rem;
+
+  article{
+    margin: 0 7%;
   }
