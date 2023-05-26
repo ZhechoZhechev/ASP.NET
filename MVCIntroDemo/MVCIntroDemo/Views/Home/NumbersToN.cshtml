@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "1 ..." + ViewData["count"];
+}
+
+<ul class="list-group-flush">
+
+    @for (int i = 1; i <= (int?)ViewData["count"]; i++)
+    {
+        <li class="list-group-item">@i</li>
+    }
+
+</ul>
+
+<form method="post">
+    <label for="count">Enter a positive number:</label>
+    <input name="count" id="count" pattern="[0-9]+(\.[0-9]+)?" title="Please enter a positive number." required value="@ViewData["count"]" />
+    <button type="submit" >Submit</button>
+</form>
+
+@*<script>
+    function validateInput(input) {
+        if (input.value < 0) {
+            input.setCustomValidity("Please enter a positive number.");
+        } else {
+            input.setCustomValidity("");
+        }
+    }
+</script>*@

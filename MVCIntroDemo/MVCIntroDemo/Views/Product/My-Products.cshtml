@@ -1,0 +1,17 @@
+﻿@model IEnumerable<ProductViewModel>
+@using MVCIntroDemo.Core.Models.Product;
+
+@{
+    ViewBag.Title = "All Products";
+}
+
+<div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+        @foreach (var item in Model)
+        {
+            <li class="list-group-item" >
+                N.@item.Id: @item.Name - @item.Price lv.
+            </li>
+        }
+    </ul>
+</div>
