@@ -1,0 +1,24 @@
+﻿@model ProductViewModel
+
+@using ShoppingListApp.Core.Models
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr>
+
+<div class="row">
+    <form method="post">
+        <div class="form-group">
+            <div class="mb-3">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" placeholder="Write product name...">
+                <span asp-validation-for="Name" class="small text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Quantity"></label>
+                <input asp-for="Quantity" class="form-control" placeholder="Write product quantity...">
+                <span asp-validation-for="Quantity" class="small text-danger"></span>
+            </div>
+        </div>
+        <input class="btn btn-primary mt-3" type="submit" value="Create">
+    </form>
+</div>
