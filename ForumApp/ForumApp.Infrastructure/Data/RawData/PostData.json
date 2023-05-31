@@ -1,0 +1,19 @@
+[
+  {
+    "Id": 1,
+    "Title": "My first post",
+    "Content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+  },
+  {
+    "Id": 2,
+    "Title": "My second post",
+    "Content": "Integer vitae libero ac risus egestas placerat."
+  },
+  {
+    "Id": 3,
+    "Title": "My third post",
+    "Content": "Donec quis dui at dolor tempor interdum."
+  }
+]
+
+
