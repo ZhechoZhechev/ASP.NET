@@ -10,7 +10,7 @@ public interface IPostService
 
     Task UpdateAsync(int id, PostFormModel postFormModel);
 
-    Task DeleteAsync();
+    Task DeleteAsync(int id);
 
     Task<PostFormModel> GetByIdAsync(int id);
 }

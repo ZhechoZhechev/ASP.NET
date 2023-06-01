@@ -27,14 +27,19 @@ public class PostService : IPostService
         await repo.SaveChangesAsync();
     }
 
-    public Task DeleteAsync()
+    public async Task DeleteAsync(int id)
     {
-        throw new NotImplementedException();
+        var postToDelete = await repo.GetByIdAsync<Post>(id);
+
+        postToDelete.IsDeleted = true;
+
+        await repo.SaveChangesAsync();
     }
 
     public async Task<IEnumerable<PostViewModel>> GetAllAsync()
     {
         return await repo.AllReadonly<Post>()
+            .Where(p => p.IsDeleted == false)
             .Select(p => new PostViewModel()
             {
                 Id = p.Id,

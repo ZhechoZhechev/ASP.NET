@@ -63,4 +63,13 @@ public class PostController : Controller
         return RedirectToAction(nameof(Index));
     }
 
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await postService.DeleteAsync(id);
+
+        return RedirectToAction(nameof(Index));
+    }
+
 }

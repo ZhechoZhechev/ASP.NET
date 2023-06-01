@@ -17,6 +17,10 @@ public class ForumAppDbContext : DbContext
     {
         modelBuilder.ApplyConfiguration<Post>(new PostConfiguration());
 
+        modelBuilder.Entity<Post>()
+           .Property(p => p.IsDeleted)
+           .HasDefaultValue(false);
+
         base.OnModelCreating(modelBuilder);
     }
     public DbSet<Post> Posts { get; set; }

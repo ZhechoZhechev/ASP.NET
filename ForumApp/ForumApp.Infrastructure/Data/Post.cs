@@ -17,4 +17,7 @@ public class Post
     [Required]
     [MaxLength(PostContentMaxLenght)]
     public string Content { get; set; } = null!;
+
+    [Required]
+    public bool IsDeleted { get; set; } = false;
 }
