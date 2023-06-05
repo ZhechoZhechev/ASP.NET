@@ -5,6 +5,7 @@ public static class DataConstants
     public static class UserConstants
     {
         internal const int UserFirstLastNameMaxLength = 15;
+        internal const int UserNameMaxLength = 150;
     }
 
     public static class TaskConstants
