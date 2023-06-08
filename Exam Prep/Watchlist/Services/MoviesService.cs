@@ -52,4 +52,20 @@ public class MoviesService : IMoviesService
         context.Movies.Add(modelToAdd);
         await context.SaveChangesAsync();
     }
+
+    public async Task AddToCollectionAsync(int movieId, string userId)
+    {
+        var movie = await context.Movies.FirstOrDefaultAsync(x => x.Id == movieId);
+        var user = await context.Users.FirstOrDefaultAsync(x => x.Id == userId);
+
+        var objectToAdd = new UserMovie()
+        {
+            Movie= movie!,
+            User = user!
+        };
+
+        user.UsersMovies.Add(objectToAdd);
+
+        await context.SaveChangesAsync();
+    }
 }

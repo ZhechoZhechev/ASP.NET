@@ -10,4 +10,6 @@ public interface IMoviesService
     Task<IEnumerable<Genre>> GetAllGenresAsync();
 
     Task AddMovieAsync(AddMovieModel model);
+
+    Task AddToCollectionAsync(int movieId, string userId);
 }
