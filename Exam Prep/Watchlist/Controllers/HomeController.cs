@@ -9,7 +9,7 @@ public class HomeController : Controller
 
         if (User?.Identity?.IsAuthenticated ?? false) 
         {
-            RedirectToAction("All", "Movies");
+           return RedirectToAction("All", "Movies");
         }
 
         return View();

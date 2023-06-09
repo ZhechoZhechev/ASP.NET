@@ -12,4 +12,8 @@ public interface IMoviesService
     Task AddMovieAsync(AddMovieModel model);
 
     Task AddToCollectionAsync(int movieId, string userId);
+
+    Task RemoveFromCollectionAsync(int movieId, string userId);
+
+    Task<IEnumerable<MovieVIewModel>> GetWatchedAsync(string userId);
 }

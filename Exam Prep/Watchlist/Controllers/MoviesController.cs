@@ -3,7 +3,7 @@ namespace Watchlist.Controllers;
 
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration.UserSecrets;
+
 using Watchlist.Data.Entities;
 using Watchlist.Models;
 using Watchlist.Services.Contacts;
@@ -72,5 +72,25 @@ public class MoviesController : Controller
         await moviesService.AddToCollectionAsync(movieId, userId);
 
         return RedirectToAction("All", "Movies");
+    }
+
+    public async Task<IActionResult> RemoveFromCollection(int movieId) 
+    {
+        var user = await userManager.GetUserAsync(HttpContext.User);
+        var userId = user.Id;
+
+        await moviesService.RemoveFromCollectionAsync(movieId, userId);
+
+        return RedirectToAction("Watched", "Movies");
+    }
+
+    public async Task<IActionResult> Watched() 
+    {
+        var user = await userManager.GetUserAsync(HttpContext.User);
+        var userId = user.Id;
+
+        var model = await moviesService.GetWatchedAsync(userId);
+
+        return View(model);
     }
 }
