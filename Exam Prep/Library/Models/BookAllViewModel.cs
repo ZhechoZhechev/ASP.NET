@@ -10,6 +10,8 @@ public class BookAllViewModel
 
     public string Category { get; set; } = null!;
 
+    public string Description { get; set; } = null!;
+
     public string ImageUrl { get; set; } = null!;
 
     public decimal Rating { get; set; }

@@ -12,6 +12,7 @@ namespace Library.Controllers
             {
                 return RedirectToAction("All", "Book");
             }
+
             return View();
         }
 
