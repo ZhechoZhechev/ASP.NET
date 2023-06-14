@@ -1,14 +1,17 @@
-﻿@{
+﻿@model AddContactViewModel
+
+@{
     ViewBag.Title = "Edit a Contact";
 }
 
-@*
+
 <h2 class="text-center">@ViewBag.Title</h2>
 <hr />
 
 <div class="row">
     <div class="col-sm-12 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
         <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="Id" />
             <div class="mb-3">
                 <label asp-for="FirstName" class="form-label">First Name</label>
                 <input asp-for="FirstName" class="form-control" aria-required="true" />
@@ -50,4 +53,3 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
-*@

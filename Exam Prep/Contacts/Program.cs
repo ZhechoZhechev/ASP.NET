@@ -1,7 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+
+using Contacts.Contracts;
 using Contacts.Data;
 using Contacts.Data.Entities;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+using Contacts.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("MSSQLConnection");
 builder.Services.AddDbContext<ContactsDbContext>(options =>
     options.UseSqlServer(connectionString));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => 
@@ -20,7 +23,10 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
     options.Password.RequireUppercase = false;
 })
     .AddEntityFrameworkStores<ContactsDbContext>();
+
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IContactService, ContactService>();
 
 var app = builder.Build();
 
