@@ -1,0 +1,26 @@
+﻿@model IEnumerable<AllDestinationsViewModel>
+
+@{
+    ViewBag.Title = "All Destination";
+}
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+
+<section class="added-travels">
+    @foreach (var dest in Model)
+    {
+        <div class="added-travel">
+            <img src=@dest.ImageUrl alt="" class="picture-added-travel">
+            <h3>From @dest.DestinationName to @dest.Origin</h3>
+            <span>Tickets #@dest.TicketsCount </span><span>@dest.Date @dest.Time</span>
+            <a href="/Tickets/Create?destinationId=X" class="addTickets">Add Tickets</a>
+            <a href="/Tickets/Reserve?destinationId=X" class="bookTrip">Book a Trip</a>
+        </div>
+    }
+
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
