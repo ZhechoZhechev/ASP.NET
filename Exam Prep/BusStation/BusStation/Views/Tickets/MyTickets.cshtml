@@ -1,14 +1,19 @@
-﻿<main>
+﻿@model IEnumerable<MyTicketsViewModel>
+
+<main>
     <h3>My Tickets</h3>
-    <section class="purchased-ticket">
-        <div class="purchased-left">
-            <img src={{DestinationImage}} alt="">
-        </div>
-        <div class="purchased-right">
-            <div>
-                <h3>{{Destination}}</h3><span>{{DateAndTime}}</span>
+    @foreach (var ticket in Model)
+    {
+        <section class="purchased-ticket">
+            <div class="purchased-left">
+                <img src=@ticket.Destination.ImageUrl alt="">
             </div>
-            <p>Ticket price: {{SingleTicket}} euros</p>
-        </div>
-    </section>
+            <div class="purchased-right">
+                <div>
+                    <h3>From @ticket.Destination.DestinationName to @ticket.Destination.Origin</h3><span>@ticket.Destination.Date @ticket.Destination.Time</span>
+                </div>
+                <p>Ticket price: @ticket.Price euros</p>
+            </div>
+        </section>
+    }
 </main>

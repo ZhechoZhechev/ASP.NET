@@ -15,7 +15,7 @@
             <h3>From @dest.DestinationName to @dest.Origin</h3>
             <span>Tickets #@dest.TicketsCount </span><span>@dest.Date @dest.Time</span>
             <a asp-controller="Tickets" asp-action="Create" asp-route-id="@dest.Id" class="addTickets">Add Tickets</a>
-            <a href="/Tickets/Reserve?destinationId=X" class="bookTrip">Book a Trip</a>
+            <a asp-controller="Tickets" asp-action="Reserve" asp-route-id="@dest.Id" class="bookTrip">Book a Trip</a>
         </div>
     }
 
